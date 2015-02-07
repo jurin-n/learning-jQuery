@@ -1,5 +1,5 @@
 # learning-jQuery 
 
 the_basics
- =>‰º‹LƒTƒCƒg‚ğ‚µ‚½B
+ =>ä¸‹è¨˜ã‚µã‚¤ãƒˆã‚’è©¦ã—ãŸã€‚
    http://oss.infoscience.co.jp/jquery/Tutorials:How_jQuery_Works.html
