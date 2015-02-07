@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+    <head>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("a").click(function(event){
+                    $("a").removeClass("large");
+                    $(this).hide("slow");
+                    alert("Thanks for visiting!");
+                });
+                $("a").addClass("test");
+
+                $("div.get").click(function(event){
+                    $.get('myhtmlpage.html', myCallBack);
+                });
+                $("div.get2").click(function(event){
+                    param1="aaa";
+                    param2="bbb";
+                    $.get('myhtmlpage.html', function(){
+                        myCallBack2(param1,param2);
+                    });
+                });
+            });
+
+            function myCallBack(){
+               alert("My Call Back!!!");
+            }
+            function myCallBack2(param1,param2){
+               alert("My Call Back!!! param1=" + param1 + ",param2=" + param2);
+            }
+        </script>
+        <style type="text/css">
+            a.test{
+              font-weight: bold;
+            }
+            a.large {
+              font-size: 48px; 
+            }
+        </style>
+    </head>
+    <body>
+        <div><a class="large" href="http://jquery.com/">jQuery!</a></div>
+        <div><a href="http://jquery.com/">jQuery2</a></div>
+        <div><a href="http://jquery.com/">jQuery3</a></div>
+        <div class="get">callback test</div>
+        <div class="get2">callback test param1=aaa param2=bbb</div>
+    </body>
+</html>
