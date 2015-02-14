@@ -22,4 +22,10 @@ $(function(){
       this.reset(); //Å©ìÆÇ©Ç»Ç¢orzÅB don't work.
     });
   });
+
+  //http://api.jquery.com/not/
+  $("li").not(":has(ul)").css("border","1px solid black");
+  //http://api.jquery.com/filter/
+  //$("li").filter(":has(ul)").css("border","1px solid black");
+
 });
