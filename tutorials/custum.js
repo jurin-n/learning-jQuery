@@ -31,4 +31,8 @@ $(function(){
     alert("/content/gallery /^o^/");
     return false;
   });
+
+  $("#faq").find("dd").hide().end().find("dt").click(function(){
+    $(this).next().slideToggle();
+  });
 });
