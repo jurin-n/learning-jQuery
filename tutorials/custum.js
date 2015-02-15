@@ -35,4 +35,22 @@ $(function(){
   $("#faq").find("dd").hide().end().find("dt").click(function(){
     $(this).next().slideToggle();
   });
+
+  $("#ajax-test").find("a").click(function(e){
+    e.preventDefault();
+    alert($(this).html());
+
+    $.post("rate.php",{rating:$(this).html()},function(data){
+      alert("callback function!");
+    })
+    .done(function(){
+      alert("done!");
+    })
+    .fail(function(){
+      alert("fail!");
+    })
+    .always(function(){
+      alert("always!");
+    });
+  });
 });
